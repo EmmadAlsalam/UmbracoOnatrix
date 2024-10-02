@@ -1,0 +1,71 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = null;
+	    var pageTitle = !string.IsNullOrEmpty(ViewBag.Title) ? $"{ViewBag.Title} | Onatrix - Financial Solutions for Your Business" : "Onatrix - Financial Solutions for Your Business";
+        var logoImg = Model?.Value<IPublishedContent>("logoImg")?.Url() ?? "";
+}
+
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>@pageTitle </title>
+  
+    <link rel="stylesheet" href="css/main.css">
+
+    
+</head>
+
+<body> 
+<div class="wrapper">
+    <header>
+        <nav>
+            <div class="navbar">
+                <i class='bx bx-menu'></i>
+                <div class="logo">
+                    <a href="/"><img src="@logoImg" alt="logo Img"></a>
+                </div>
+                <div class="nav-links">
+                    <div class="sidebar-logo">
+                        <span class="logo-name"></span>
+                        <i class='bx bx-x'></i>
+                    </div>
+                    <ul class="links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about">About</a></li>
+                        <li><a href="service">Services</a></li>
+                        <li><a href="Projects ">Projects</a></li>
+                        <li><a href="contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+
+            <div class="footer-right">
+                <p>© Onatrix. All Rights Reserved. Credits to Themesflat</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+		
+	
+
+
+
+<script src="/script/main.js" > </script>
+
+
+</body>

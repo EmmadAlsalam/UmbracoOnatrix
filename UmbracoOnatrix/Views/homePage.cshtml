@@ -1,0 +1,243 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    Layout = "mainLayout.cshtml";
+    ViewBag.Title = Model?.Value("pageTitle") ?? null;
+    var backgroundImage = Model?.Value<IPublishedContent>("heroBackgroundImage")?.Url() ?? "";
+    var signatureImage = Model?.Value<IPublishedContent>("aboutSignatureImage")?.Url() ?? "";
+    var heading1Image = Model?.Value<IPublishedContent>("cardHeading1Image")?.Url() ?? "";
+    var heading2Image = Model?.Value<IPublishedContent>("cardHeading2Image")?.Url() ?? "";
+    var heading3Image = Model?.Value<IPublishedContent>("cardHeading3Image")?.Url() ?? "";
+    var heading4Image = Model?.Value<IPublishedContent>("cardHeading4Image")?.Url() ?? "";
+    var heading5Image = Model?.Value<IPublishedContent>("cardHeading5Image")?.Url() ?? "";
+    var heading6Image = Model?.Value<IPublishedContent>("cardHeading6Image")?.Url() ?? "";
+    var storyBackgroundImage = Model?.Value<IPublishedContent>("storyBackgroundImage")?.Url() ?? "";
+    var storyHeadlineImage = Model?.Value<IPublishedContent>("storyHeadlineImage")?.Url() ?? "";
+    var recentImg1 = Model?.Value<IPublishedContent>("recentImg1")?.Url() ?? "";
+    var recentImg2 = Model?.Value<IPublishedContent>("recentImg2")?.Url() ?? "";
+    var recentImg3 = Model?.Value<IPublishedContent>("recentImg3")?.Url() ?? "";
+    var recentImg4 = Model?.Value<IPublishedContent>("recentImg4")?.Url() ?? "";
+    var successBackgroundImage = Model?.Value<IPublishedContent>("successBackgroundImage")?.Url() ?? ""; 
+    var successGrImage = Model?.Value<IPublishedContent>("successGrImage")?.Url() ?? "";
+    var Partner01 = Model?.Value<IPublishedContent>("Partner01")?.Url() ?? "";
+    var Partner02 = Model?.Value<IPublishedContent>("Partner02")?.Url() ?? "";    
+    var Partner03 = Model?.Value<IPublishedContent>("Partner03")?.Url() ?? "";    
+    var Partner04 = Model?.Value<IPublishedContent>("Partner04")?.Url() ?? "";    
+    var Partner05 = Model?.Value<IPublishedContent>("Partner05")?.Url() ?? "";    
+    var Partner06 = Model?.Value<IPublishedContent>("Partner06")?.Url() ?? "";                    
+}
+<section>
+
+
+    <!-- hero section -->
+    <div class="hero">
+        <div class="img-hero" style="background-image: url('@backgroundImage'); background-size: cover; background-position: center; height: 60vh;">
+            <div class="row">
+                <div class="col-4 offset-2">
+                    <div class="img-hero-text">
+<h1 class="hero-text">@Model?.Value("heroHeadline")</h1>
+<h1 class="hero-text">@Model?.Value("heroHeadline1")</h1>
+<p class="hero-p-text">
+    @Model?.Value("heroText")
+</p>
+<a href="@Model?.Value("heroButtonUrl")" class="btn-a">
+    <button class="btn-hero">@Model?.Value("heroButtonText")</button>
+</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+ <section>
+        <div class="row">
+            <div class="container-body">
+                <br><br><br>
+                <div class="col-6 offset-1">
+                    <h5 class="body-about-us-text"> @Model.Value("aboutSectionTitle")</h5>
+                    <h3 class="body-about-below">We have 40 years experience</h3><br>
+                    <p class="body-about-below-experience">“We have over 25 years of experience providing expert
+                        financial
+                        <br>
+                        advice to both businesses and individuals.”
+                    </p>
+                    <p class="body-below-experience-p-tag">Dolor in reprehenderit in voluptate velit esse cillum dolore
+                        eu
+                        fugiat
+                        nulla pariatur. Excepteur sint <br>
+                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <br>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                    </p>
+                    <img src="@signatureImage" alt="signature" class="img-below-about-in-body">
+                    <p class="body-below-experience-p-tag"> @Model.Value("aboutSignature") </p>
+                </div>
+            </div>
+
+    </section>
+
+    <section class="services-section">
+        <h4 class="services-h4 body-about-below">@Model.Value("serviceHeadline")</h4>
+        <h1 class="services-h1 body-about-below">
+            @Model.Value("serviceHeadText2")
+        </h1>
+        <h1 class="services-h1 body-about-below">
+            @Model.Value("serviceHeadText")
+        </h1>
+
+
+        <div class="card-container container">
+            <div class="card">
+                <h2 class="card-heading">@Model.Value("cardHeading1")</h2>
+                <img src="@heading1Image" alt="heading1 Image" class="card-image">
+                <p class="card-text">@Model.Value("cardText1") </p>
+            </div>
+
+
+            <div class="card" style="margin-left: -90px;">
+            <h2 class="card-heading">@Model.Value("cardHeading2")</h2>
+                <img src="@heading2Image" alt="heading2 Image " class="card-image">
+            <p class="card-text">@Model.Value("cardText2") </p>
+            </div>
+
+
+            <div class="card" style="margin-left: -90px;">
+                <h2 class="card-heading">Assurance & Audits</h2>
+                <img src="@heading3Image" alt="heading3 Image" class="card-image">
+            <p class="card-text">@Model.Value("cardText3")</p>
+            </div>
+        </div>
+
+        <div class="card-container container">
+            <div class="card">
+                <h2 class="card-heading">@Model.Value("cardHeading1")</h2>
+                <img src="@heading4Image" alt="heading4 Image" class="card-image">
+                <p class="card-text">@Model.Value("cardText1") </p>
+            </div>
+
+
+            <div class="card" style="margin-left: -90px;">
+            <h2 class="card-heading">@Model.Value("cardHeading5")</h2>
+                <img src="@heading5Image" alt="heading2 Image " class="card-image">
+            <p class="card-text">@Model.Value("cardText2") </p>
+            </div>
+
+
+            <div class="card" style="margin-left: -90px;">
+                <h2 class="card-heading">Assurance & Audits</h2>
+                <img src="@heading6Image" alt="heading6 Image" class="card-image">
+            <p class="card-text">@Model.Value("cardText3")</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="clients-sction-content-wrapper">
+        <div class="clients-section">
+           <img class="img-1" src="@storyHeadlineImage" alt="story Headline Image" srcset="">
+            <h1 class="heading-1">
+                @Model.Value("storyTitle")
+            </h1>
+            <h2 class="heading-2">
+                @Model.Value("storyHeadline")
+            </h2>
+            <p class="para-3">@Model.Value("storyText")
+            <p class="btn-p"> <button class="btn-para">
+                    @Model.Value("storyBottomText")
+                </button> </p>
+        </div>
+        <div>
+
+        </div>
+        <div>
+            <img class="img-1" src="@storyBackgroundImage" alt="story Background Image" srcset="">
+        </div>
+    </section>
+
+
+
+        <section class="section-below-clients">
+        <div class="container-img">
+            <h5 class="success-title same-color-class center">SUCCESS STORIES</h5>
+            <h3 class="success-below-title center">Success story</h3>
+            <div class="container">
+                <img class="number-box" src="@successBackgroundImage" alt="success Background Image">
+                <div class="story-nummer">
+                    
+                    <div class="number-box">689</div>
+                    <div class="number-box">370</div>
+                    <div class="number-box">125</div>
+                </div>
+                <div class="row-story">
+                    <div class="col-3 offset-1">
+                        <p class="color-text-1">More than 100 customers has been <br>
+                            <span class="center-text-alignment">served</span>
+                        </p>
+                    </div>
+                    <div class="col-3 offset-1">
+                        <p class="color-text-2">More than 370 projects has been <br>
+                            <span class="center-text-alignment">completed</span>
+                        </p>
+                    </div>
+                    <div class="col-3 offset-1">
+                        <p class="color-text-3">More than 125 branches has been <br>
+                            established in Europe and America</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <img class="success-img" src="@successGrImage" alt="success Gr Image">
+            </div>
+        </div>
+    </section>
+    <section class="projects">
+        <h2>OUR PROJECTS</h2>
+        <h3>Recent projects</h3>
+        <div class="project-gallery">
+            <div class="project-item">
+                <img src="@recentImg1" alt="Project Image">
+                <div class="project-info">
+                    <h4>@Model.Value("recentH4Text1").</h4>
+                    <p>@Model.Value("recentPText4")</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="@recentImg2" alt="Project Image">
+                <div class="project-info">
+                    <h4>@Model.Value("recentH4Text2")</h4>
+                    <p>@Model.Value("recentPText4")</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="@recentImg3" alt="Project Image">
+                <div class="project-info">
+                    <h4>@Model.Value("recentH4Text3")</h4>
+                    <p>@Model.Value("recentPText4")</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="@recentImg4" alt="Project Image">
+                <div class="project-info">
+                    <h4>@Model.Value("recentH4Text4")</h4>
+                    <p>@Model.Value("recentPText4")</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="partners">
+        <div class="container-mt-5">
+            <img src="@Partner01" alt="partners-img">
+            <img src="@Partner02" alt="partners-img">
+            <img src="@Partner03" alt="partners-img">
+            <img src="@Partner04" alt="partners-img">
+            <img src="@Partner05" alt="partners-img">
+            <img src="@Partner06" alt="partners-img">
+        </div>        
+    </div>
+

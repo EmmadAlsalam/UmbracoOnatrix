@@ -1,0 +1,99 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+    var storyHeadlineImage1 = Model?.Value<IPublishedContent>("storyHeadlineImage1")?.Url() ?? "";
+    var storyHeadlineImage2 = Model?.Value<IPublishedContent>("storyHeadlineImage2")?.Url() ?? "";
+    var storyHeadlineImage3 = Model?.Value<IPublishedContent>("storyHeadlineImage3")?.Url() ?? "";
+    var storyHeadlineImage4 = Model?.Value<IPublishedContent>("storyHeadlineImage4")?.Url() ?? "";
+    var storyHeadlineImage5 = Model?.Value<IPublishedContent>("storyHeadlineImage5")?.Url() ?? "";
+    var storyHeadlineImage6 = Model?.Value<IPublishedContent>("storyHeadlineImage6")?.Url() ?? "";
+      
+}
+
+    <div class="about-section">
+        <div class="text-overlay">
+            <h1>Our Services</h1>
+            <p><a class="centre-part-services" href="#">Home</a> > <a class="centre-part-services" href="/Managment">Services</a></p>
+        </div>
+    </div>
+
+    <section class="services-section">
+        <h1 class="services-h1 body-about-below">
+            We ProvideThe Solutions
+        </h1>
+        <h1 class="services-h1 body-about-below">
+            To Grow Your Business Faster
+        </h1>
+
+
+        <div class="card-container container">
+            <div class="card">
+                <h2 class="card-heading">Risk Management</h2>
+                <img src="@storyHeadlineImage1" alt="storyHeadlineImage1" class="card-image">
+                <p class="card-text">Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+            </div>
+
+
+            <div class="card" style="margin-left: -90px;">
+            <h2 class="card-heading">Bonds & Commodities</h2>
+                <img src="@storyHeadlineImage2" alt="heading2 Image " class="card-image">
+            <p class="card-text">Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non </p>
+            </div>
+
+
+            <div class="card" style="margin-left: -90px;">
+                <h2 class="card-heading">Assurance & Audits</h2>
+                <img src="@storyHeadlineImage3" alt="heading3 Image" class="card-image">
+            <p class="card-text">Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+            </div>
+        </div>
+
+        <div class="card-container container">
+            <div class="card">
+                <h2 class="card-heading">Tax and Trusts</h2>
+                <img src="@storyHeadlineImage4" alt="heading4 Image" class="card-image">
+                <p class="card-text">Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+            </div>
+
+
+            <div class="card" style="margin-left: -90px;">
+            <h2 class="card-heading">Financial Advisor</h2>
+                <img src="@storyHeadlineImage5" alt="heading2 Image " class="card-image">
+            <p class="card-text">Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+            </div>
+
+
+            <div class="card" style="margin-left: -90px;">
+                <h2 class="card-heading">Assurance & Audits</h2>
+                <img src="@storyHeadlineImage6" alt="6 Image" class="card-image">
+            <p class="card-text">Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+            </div>
+        </div>
+    </section>
+
+        <p class="alignment-p-below-cards">
+        <span class="pagination-prev">Prev</span>
+        <span class="pagination-1">1</span>
+        <span class="pagination-2">2</span>
+        <span class="pagination-next">Next</span>
+    </p>
+    <section class="flex-box-container-man">
+        <div class="image-container">
+            <div class="contact-info">
+                <h2 class="img-text">Let us know about <br> your next project</h2>
+                <p>
+                    <span class="icon icon-per"><i class="fa-solid fa-location-dot"></i></span> Office location<br>
+                    Klarabergsviadukten 90, 111 52 Stockholm
+                </p>
+                <p>
+                    <span class="icon icon-per"><i class="fa-regular fa-phone-flip"></i></span> Phone number<br>
+                    +46 8 123 456 75
+                </p>
+                <p>
+                    <span class="icon icon-per">&#9993;</span> E-mail address<br>
+                    sales@onatrix.com
+                </p>
+            </div>
+        </div>
+    </section>

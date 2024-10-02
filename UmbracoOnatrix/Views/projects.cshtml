@@ -1,0 +1,111 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+
+    var boxsImg1 = Model?.Value<IPublishedContent>("boxsImg1")?.Url() ?? "";
+        var boxsImg2 = Model?.Value<IPublishedContent>("boxsImg2")?.Url() ?? "";
+            var boxsImg3 = Model?.Value<IPublishedContent>("boxsImg3")?.Url() ?? "";
+                var boxsImg4 = Model?.Value<IPublishedContent>("boxsImg4")?.Url() ?? "";
+        
+}
+
+    <div class="about-section">
+        <div class="text-overlay">
+            <h1>Our Projects</h1>
+            <p><a class="centre-part-services" href="#">Home</a> > <span>Projects</span></p>
+        </div>
+    </div>
+
+        <div class="container456">
+        <!-- Main Content Section -->
+        <div class="main-content456">
+            <!-- First Article -->
+            <div class="article456">
+                <div class="article-img456">
+                    <img class="project-img" src="@boxsImg1" alt="Meeting Image">
+                </div>
+                <div class="article-info456">
+                    <h2>Annual Report for Juva Inc.</h2>
+                    <p class="date456"><span>📅</span> June 15, 2024</p>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                        Sed ut perspiciatis unde omnis iste natus error.</p>
+                    <a href="#">Read more </a>
+                </div>
+            </div>
+            <hr class="456-hr-line-br" style="  opacity: 0.8; border: 1px solid #edededff;">
+            <!-- Second Article -->
+            <div class="article456">
+                <div class="article-img456">
+                    <img class="project-img" src="@boxsImg2" alt="Business Image">
+                </div>
+                <div class="article-info456">
+                    <h2>Business Insights for SP Group...</h2>
+                    <p class="date456"><span>📅</span> May 17, 2024</p>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                        Sed ut perspiciatis unde omnis iste natus error.</p>
+                    <a href="#">Read more </a>
+                </div>
+            </div>
+            <hr class="456-hr-line-br" style="  opacity: 0.8; border: 1px solid #edededff;">
+            <!-- Third Article -->
+            <div class="article456">
+                <div class="article-img456">
+                    <img class="project-img" src="@boxsImg3" alt="Project Discussion">
+                </div>
+                <div class="article-info456">
+                    <h2>Project Review for Q4 2024</h2>
+                    <p class="date456"><span>📅</span> April 10, 2024</p>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                        Sed ut perspiciatis unde omnis iste natus error.</p>
+                    <a href="#">Read more </a>
+                </div>
+            </div>
+            <hr class="456-hr-line-br" style="  opacity: 0.8; border: 1px solid #edededff;">
+            <!-- Fourth Article -->
+            <div class="article456">
+                <div class="article-img456">
+                    <img class="project-img" src="@boxsImg4" alt="Market Analysis">
+                </div>
+                <div class="article-info456">
+                    <h2>Budget Planning for Buccura In...</h2>
+                    <p class="date456"><span>📅</span> March 5, 2024</p>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                        Sed ut perspiciatis unde omnis iste natus error.</p>
+                    <a href="#">Read more </a>
+                </div>
+            </div>
+            <p class="alignment-p-below-cards margin-project">
+                <span class="pagination-prev">Prev</span>
+                <span class="pagination-1">1</span>
+                <span class="pagination-2">2</span>
+                <span class="pagination-next">Next</span>
+            </p>
+        </div>
+        <!-- Sidebar Section -->
+        <div class="sidebar456">
+            <div class="tags456">
+                <h3 class="h3456">Tags</h3><br>
+                <div class="tag-list456">
+                    <span class="tag456">Report</span>
+                    <span class="tag456">Business plans</span><br>
+                    <span class="tag456">Insights</span>
+                    <span class="tag456">Business</span>
+                    <span class="tag456">App</span>
+                    <span class="tag456">Project</span>
+                    <span class="tag456">Finance</span>
+                    <span class="tag456">Pricing</span>
+                </div>
+            </div>
+            <div class="help-box">
+                <h3>How can we help you?</h3>
+                <p>Online support 24/7, we are here to help you</p>
+
+                <div class="email-input-wrapper">
+                    <input type="email" name="email" required placeholder="E-mail address" class="email-sidebar-input"
+                        style="border: none;">
+                    <i class="fas fa-envelope icon-sidebar"></i>
+                </div>
+            </div>
+        </div>
+    </div>
