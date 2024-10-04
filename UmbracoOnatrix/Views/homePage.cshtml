@@ -58,7 +58,7 @@
             <div class="container-body">
                 <br><br><br>
                 <div class="col-6 offset-1">
-                    <h5 class="body-about-us-text"> @Model.Value("aboutSectionTitle")</h5>
+                    <h5 class="body-about-us-text">ABOUT US</h5>
                     <h3 class="body-about-below">We have 40 years experience</h3><br>
                     <p class="body-about-below-experience">“We have over 25 years of experience providing expert
                         financial
@@ -74,10 +74,33 @@
                         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
                     </p>
                     <img src="@signatureImage" alt="signature" class="img-below-about-in-body">
-                    <p class="body-below-experience-p-tag"> @Model.Value("aboutSignature") </p>
+                    <p class="signature-p"> Tina Fox - CEO & Founder </p>
                 </div>
             </div>
-
+            <!-- Form Structure -->
+            <div class="col-3 offset-7">
+                <div class="form-container">
+                    <div class="form-header">
+                        Request a Call Back
+                    </div>
+                    <div class="form-description">
+                        <p class="body-below-experience-p-tag">Dolor in reprehenderit in voluptate velit esse cillum
+                            dolore
+                            eu
+                            fugiat nulla pariatur exceptuer sint
+                            occaecat </p>
+                    </div>
+                    <input type="text" class="form-input" placeholder="Name">
+                    <input type="email" class="form-input" placeholder="Email address">
+                    <input type="text" class="form-input" placeholder="Phone">
+                    <select class="form-select">
+                        <option value="Financial consulting">Financial consulting</option>
+                        <option value="Investment advice">Investment advice</option>
+                        <option value="Tax planning">Tax planning</option>
+                    </select>
+                    <button class="form-submit">Submit</button>
+                </div>
+            </div>
     </section>
 
     <section class="services-section">

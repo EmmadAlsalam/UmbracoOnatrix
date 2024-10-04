@@ -1,0 +1,20 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+@{
+    var rootContents = UmbracoHelper.ContentAtRoot();
+    var settings = rootContents?.FirstOrDefault(x => x.ContentType.Alias == "settingsPage") ?? null;
+    
+}
+        <div class="bottom-bar">
+            <div class="bottom-content">
+                <p>Klarabergsviadukten 90, 111 64 Stockholm</p>
+                <div class="icon-links">
+                    <div class="centered-line"></div>
+
+                    <a href="/"><i class="fa-brands fa-facebook-f" style="color: white;"></i></a>
+                    <a href="/"><i class="fa-brands fa-twitter" style="color: white;"></i></a>
+                    <a href="/"><i class="fa-brands fa-linkedin-in" style="color: white;"></i></a>
+                </div>
+            </div>
+        </div>
